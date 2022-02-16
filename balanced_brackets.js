@@ -1,14 +1,4 @@
-function balancedBrackets(string) {
-    let stringList = string.split('')
-    let brackets = []
-    stringList.forEach(letter => {
-        if (letter.search(/[()]/) != -1 || letter.search(/[\[\]]/) != -1 || letter.search(/[{}]/) != -1) {
-            brackets.push(letter)
-        }
-    })
-
-    // if brackets are even check wether they match
-    if (brackets.length % 2 == 0) {
+/*
         console.log(brackets)
         return bracketMatcher(brackets)
     }
