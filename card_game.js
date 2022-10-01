@@ -45,7 +45,7 @@ function card_game(arr) {
   Array.from(Array(5).keys()).forEach(() => {
     arr.forEach((player) => {
       const existingCards = playersWithCards[player] || [];
-      existingCards.push(deck.shift(Math.floor(Math.random() * deck.length)));
+      existingCards.push(deck.splice(Math.floor(Math.random() * deck.length), 1));
       playersWithCards[player] = existingCards;
     });
   });
